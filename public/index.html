@@ -7,14 +7,19 @@
   <body ng-app="myApp">
     <div class="container" ng-controller="MyController">
       {{name}}
-      {{color}}
+    <input type="text" ng-model="myModel" />
+      <div>
+        {{myModel}}
+    </div>
+
+    <div ng-controller="sumgai">
     </div>
 
     {{"hello" + "angular!"}}
     {{100 + 2}}
 
     <!-- set the model as "firstName" -->
-    <input type="text" ng-model="firstName">
+
 
     <!-- bind model value to template so typing into the firstName module also prints out what you're typing-->
     <div>
