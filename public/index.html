@@ -19,9 +19,12 @@
 
         <h1>BOOKS</h1>
           Single: {{oneBook}}
-          <div ng-repeat="book in books">
-            <h3>{{book}}</h3>
-          </div>
+          <ul ng-repeat="book in books">
+            <li>
+              <h3>{{book.title}}</h3>
+              <p>{{book.author}}</p>
+            </li>
+          </ul>
           <br>
           All the Books: {{books}}
     </div>
