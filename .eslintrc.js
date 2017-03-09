@@ -1,5 +1,5 @@
 module.exports = {
-    "extends": "standard",
+    "extends": "angular",
     "installedESLint": true,
     "plugins": [
         "standard",

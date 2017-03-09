@@ -8,6 +8,7 @@ myApp
   .config(() => {
 
   })
-  .run(() => {
-    console.log('i am running angular!')
+// rootScope dependency on APP_VERSION
+  .run(($rootScope, APP_VERSION) => {
+    $rootScope.APP_VERSION = APP_VERSION
   })
