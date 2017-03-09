@@ -7,10 +7,13 @@
   <body ng-app="myApp">
     <div class="container" ng-controller="MyController">
       {{name}}
-    <input type="text" ng-model="myModel" />
-      <div>
-        {{myModel}}
-      </div>
+      <br>
+      Main Character: {{mainCharacter}}
+      <br>
+      <input type="text" ng-model="myModel" />
+        <div>
+          {{myModel}}
+        </div>
     </div>
 
     {{"hello" + "angular!"}}
@@ -27,5 +30,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.11/angular.min.js"></script>
     <script src="js/myApp.js" charset="utf-8"></script>
     <script src="js/myController.js" charset="utf-8"></script>
+    <script src="js/values.js" charset="utf-8"></script>
   </body>
 </html>

@@ -1,0 +1,1 @@
+myApp.value('mainCharacter', 'Archer')
