@@ -10,6 +10,8 @@ myApp.controller('MyController', [
 
   $scope.charVersion = CharacaterVersionFactory
 
-  $scope.books = BookService.getBooks();
-  $scope.oneBook = BookService.getBook(1);
+  $scope.BookService = BookService
+
+  // $scope.books = BookService.getBooks();
+  // $scope.oneBook = BookService.getBook(1);
 }])

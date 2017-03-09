@@ -18,15 +18,21 @@
         </div>
 
         <h1>BOOKS</h1>
-          Single: {{oneBook}}
-          <ul ng-repeat="book in books">
+        <form>
+          <input type="text" ng-model="new_book.title" name="title" placeholder="Title" />
+          <input type="text" ng-model="new_book.author" name="author" placeholder="Author" />
+          <button type="submit" ng-click="BookService.addBook(new_book)">New Book</button>
+        </form>
+          <!-- Single: {{oneBook}} -->
+          {{BookService.getBook(1)}}
+          <ul ng-repeat="book in BookService.books">
             <li>
               <h3>{{book.title}}</h3>
               <p>{{book.author}}</p>
             </li>
           </ul>
           <br>
-          All the Books: {{books}}
+          <!-- All the Books: {{books}} -->
     </div>
 
     {{"hello" + "angular!"}}
