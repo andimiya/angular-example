@@ -23,9 +23,13 @@
           <input type="text" ng-model="new_book.author" name="author" placeholder="Author" />
           <button type="submit" ng-click="BookService.addBook(new_book); new_book={}">New Book</button>
         </form>
+
+        <input type ="text" ng-model="searchBookTitle" placeholder="Book Search"/>
+
           <!-- Single: {{oneBook}} -->
-          {{BookService.getBook(1)}}
-          <ul ng-repeat="book in BookService.books">
+          <!-- {{BookService.getBook(1)}} -->
+
+          <ul ng-repeat="book in BookService.books | filter:{author:searchBookTitle}">
             <li>
               <h3>{{book.title}}</h3>
               <p>{{book.author}}</p>
