@@ -32,6 +32,17 @@
             </li>
           </ul>
           <br>
+
+          <h1>Movies</h1>
+          <ul ng-repeat="movie in Movies">
+            <li>
+              <h3>{{movie.title}}</h3>
+              <p>
+                {{movie.year}}
+              </p>
+            </li>
+          </ul>
+          </div>
           <!-- All the Books: {{books}} -->
     </div>
 
@@ -55,5 +66,6 @@
     <script src="js/constants.js" charset="utf-8"></script>
     <script src="js/factories.js" charset="utf-8"></script>
     <script src="js/services.js" charset="utf-8"></script>
+    <script src="js/providers.js" charset="utf-8"></script>
   </body>
 </html>

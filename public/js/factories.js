@@ -1,4 +1,4 @@
-myApp.factory('CharacaterVersionFactory', [
+myApp.factory('CharacterVersionFactory', [
   'mainCharacter',
   'APP_VERSION',
   (mainCharacter, APP_VERSION) => {

@@ -5,8 +5,8 @@ angular.module('myApp', [])
 var myApp = angular.module('myApp')
 
 myApp
-  .config(() => {
-
+  .config((MoviesProvider) => {
+    MoviesProvider.setEndpoint('/api/movies')
   })
 // rootScope dependency on APP_VERSION
   .run(($rootScope, APP_VERSION) => {
