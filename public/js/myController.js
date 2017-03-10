@@ -15,6 +15,9 @@ myApp.controller('MyController', [
 
     // $scope.Movies = Movies.getMovies();
 
+    //Adding this empty Movies array prevents the 'filter is not defined' console error
+    $scope.Movies = []
+
     Movies.getMovies().success(function(movies){
       $scope.Movies = movies;
     })
