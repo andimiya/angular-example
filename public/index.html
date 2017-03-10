@@ -8,14 +8,13 @@
   <body ng-app="myApp">
 
     <div class="container" ng-controller="MainController">
-      <a href="#/">Home</a>
-      <a href="#/books">Books</a>
-      <a href="#/movies">Movies</a>
-      
+      <a href="/">Home</a>
+      <a href="/books">Books</a>
+      <a href="/movies">Movies</a>
+
       <div ng-view></div>
     </div>
 
-    {{APP_VERSION}}
     <!-- import scripts from cdnjs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.11/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.11/angular-route.min.js" charset="utf-8"></script>

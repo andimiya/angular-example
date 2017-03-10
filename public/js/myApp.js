@@ -6,7 +6,7 @@ angular.module('myApp', ['ngRoute'])
 var myApp = angular.module('myApp')
 
 myApp
-  .config((MoviesProvider, $routeProvider) => {
+  .config((MoviesProvider, $routeProvider, $locationProvider) => {
     MoviesProvider.setEndpoint('/api/movies')
 
   $routeProvider
@@ -21,4 +21,9 @@ myApp
       templateUrl: 'views/movies.html',
       controller: 'MoviesController'
     })
+
+  $locationProvider.html5Mode({enabled: true, requireBase: false})
+  })
+  .run(($rootScope, APP_VERSION) => {
+    $rootScope.APP_VERSION = APP_VERSION
 })
