@@ -34,7 +34,7 @@
           <br>
 
           <h1>Movies</h1>
-          <ul ng-repeat="movie in Movies">
+          <ul ng-repeat="movie in Movies | filter: {year:19}">
             <li>
               <h3>{{movie.title}}</h3>
               <p>
