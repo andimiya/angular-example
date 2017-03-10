@@ -1,69 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="viewport" content="width=device-width" />
     <title>Angular Example</title>
   </head>
+
   <body ng-app="myApp">
-    <div class="container" ng-controller="MyController">
-      {{name}}
-      <br>
-      Main Character: {{mainCharacter}}
-      <br>
-      Concatenated Value: {{charVersion}}
-      <br>
-      <input type="text" ng-model="myModel" />
-        <div>
-          {{myModel}}
-        </div>
 
-        <h1>BOOKS</h1>
-        <form>
-          <input type="text" ng-model="new_book.title" name="title" placeholder="Title" />
-          <input type="text" ng-model="new_book.author" name="author" placeholder="Author" />
-          <button type="submit" ng-click="BookService.addBook(new_book); new_book={}">New Book</button>
-        </form>
-
-        <input type ="text" ng-model="searchBookTitle" placeholder="Book Search"/>
-
-          <!-- Single: {{oneBook}} -->
-          <!-- {{BookService.getBook(1)}} -->
-
-          <ul ng-repeat="book in BookService.books | filter:{author:searchBookTitle} | orderBy:-'title'">
-            <li>
-              <h3>{{book.title}}</h3>
-              <p>{{book.author}}</p>
-            </li>
-          </ul>
-          <br>
-
-          <h1>Movies</h1>
-          <ul ng-repeat="movie in Movies | beforeYearFilter:1983 | orderBy:'-year'">
-            <li>
-              <h3>{{movie.title}}</h3>
-              <p>{{movie.year}}</p>
-            </li>
-          </ul>
-          </div>
-          <!-- All the Books: {{books}} -->
+    <div class="container" ng-controller="MainController">
+      <div ng-view></div>
     </div>
 
-    {{"hello" + "angular!"}}
-    {{100 + 2}}
-    <br>
     {{APP_VERSION}}
-
-    <!-- set the model as "firstName" -->
-
-
-    <!-- bind model value to template so typing into the firstName module also prints out what you're typing-->
-    <div>
-      {{firstName}}
-    </div>
-
+    <!-- import scripts from cdnjs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.11/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.11/angular-route.min.js" charset="utf-8"></script>
+    <!-- your application starter -->
     <script src="js/myApp.js" charset="utf-8"></script>
-    <script src="js/myController.js" charset="utf-8"></script>
+    <!-- your controllers -->
+    <script src="js/controllers/MainController.js" charset="utf-8"></script>
+    <script src="js/controllers/BooksController.js" charset="utf-8"></script>
+    <script src="js/controllers/MoviesController.js" charset="utf-8"></script>
+    <!-- your providers -->
     <script src="js/values.js" charset="utf-8"></script>
     <script src="js/constants.js" charset="utf-8"></script>
     <script src="js/factories.js" charset="utf-8"></script>
