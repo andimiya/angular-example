@@ -22,6 +22,8 @@ myApp
       controller: 'MoviesController'
     })
 
+TC8715D5F4B23
+
   $locationProvider.html5Mode({enabled: true, requireBase: false})
   })
   .run(($rootScope, APP_VERSION) => {
